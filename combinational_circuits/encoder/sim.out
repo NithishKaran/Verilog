@@ -1,0 +1,92 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x5a6f3c1cb720 .scope module, "priority_4to2_tb" "priority_4to2_tb" 2 2;
+ .timescale -9 -12;
+v0x5a6f3c1e3e90_0 .var "i", 3 0;
+v0x5a6f3c1e3f50_0 .net "valid", 0 0, L_0x5a6f3c1e5030;  1 drivers
+v0x5a6f3c1e4020_0 .net "y", 1 0, L_0x5a6f3c1e4620;  1 drivers
+S_0x5a6f3c1cb8b0 .scope module, "uut" "priority_4to2" 2 8, 3 1 0, S_0x5a6f3c1cb720;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "i";
+    .port_info 1 /OUTPUT 2 "y";
+    .port_info 2 /OUTPUT 1 "valid";
+L_0x5a6f3c1e4360 .functor NOT 1, L_0x5a6f3c1e4290, C4<0>, C4<0>, C4<0>;
+L_0x5a6f3c1e4400 .functor AND 1, L_0x5a6f3c1e41f0, L_0x5a6f3c1e4360, C4<1>, C4<1>;
+L_0x5a6f3c1e4510 .functor OR 1, L_0x5a6f3c1e4120, L_0x5a6f3c1e4400, C4<0>, C4<0>;
+L_0x5a6f3c1e4910 .functor OR 1, L_0x5a6f3c1e4790, L_0x5a6f3c1e4830, C4<0>, C4<0>;
+L_0x5a6f3c1e4c30 .functor OR 1, L_0x5a6f3c1e4aa0, L_0x5a6f3c1e4b40, C4<0>, C4<0>;
+L_0x5a6f3c1e4de0 .functor OR 1, L_0x5a6f3c1e4c30, L_0x5a6f3c1e4d40, C4<0>, C4<0>;
+L_0x5a6f3c1e5030 .functor OR 1, L_0x5a6f3c1e4de0, L_0x5a6f3c1e4f30, C4<0>, C4<0>;
+v0x5a6f3c1cbae0_0 .net *"_ivl_10", 0 0, L_0x5a6f3c1e4400;  1 drivers
+v0x5a6f3c1e2f20_0 .net *"_ivl_12", 0 0, L_0x5a6f3c1e4510;  1 drivers
+v0x5a6f3c1e3000_0 .net *"_ivl_18", 0 0, L_0x5a6f3c1e4790;  1 drivers
+v0x5a6f3c1e30c0_0 .net *"_ivl_20", 0 0, L_0x5a6f3c1e4830;  1 drivers
+v0x5a6f3c1e31a0_0 .net *"_ivl_21", 0 0, L_0x5a6f3c1e4910;  1 drivers
+v0x5a6f3c1e32d0_0 .net *"_ivl_24", 0 0, L_0x5a6f3c1e4aa0;  1 drivers
+v0x5a6f3c1e33b0_0 .net *"_ivl_26", 0 0, L_0x5a6f3c1e4b40;  1 drivers
+v0x5a6f3c1e3490_0 .net *"_ivl_27", 0 0, L_0x5a6f3c1e4c30;  1 drivers
+v0x5a6f3c1e3570_0 .net *"_ivl_3", 0 0, L_0x5a6f3c1e4120;  1 drivers
+v0x5a6f3c1e3650_0 .net *"_ivl_30", 0 0, L_0x5a6f3c1e4d40;  1 drivers
+v0x5a6f3c1e3730_0 .net *"_ivl_31", 0 0, L_0x5a6f3c1e4de0;  1 drivers
+v0x5a6f3c1e3810_0 .net *"_ivl_34", 0 0, L_0x5a6f3c1e4f30;  1 drivers
+v0x5a6f3c1e38f0_0 .net *"_ivl_5", 0 0, L_0x5a6f3c1e41f0;  1 drivers
+v0x5a6f3c1e39d0_0 .net *"_ivl_7", 0 0, L_0x5a6f3c1e4290;  1 drivers
+v0x5a6f3c1e3ab0_0 .net *"_ivl_8", 0 0, L_0x5a6f3c1e4360;  1 drivers
+v0x5a6f3c1e3b90_0 .net "i", 3 0, v0x5a6f3c1e3e90_0;  1 drivers
+v0x5a6f3c1e3c70_0 .net "valid", 0 0, L_0x5a6f3c1e5030;  alias, 1 drivers
+v0x5a6f3c1e3d30_0 .net "y", 1 0, L_0x5a6f3c1e4620;  alias, 1 drivers
+L_0x5a6f3c1e4120 .part v0x5a6f3c1e3e90_0, 3, 1;
+L_0x5a6f3c1e41f0 .part v0x5a6f3c1e3e90_0, 1, 1;
+L_0x5a6f3c1e4290 .part v0x5a6f3c1e3e90_0, 2, 1;
+L_0x5a6f3c1e4620 .concat8 [ 1 1 0 0], L_0x5a6f3c1e4510, L_0x5a6f3c1e4910;
+L_0x5a6f3c1e4790 .part v0x5a6f3c1e3e90_0, 3, 1;
+L_0x5a6f3c1e4830 .part v0x5a6f3c1e3e90_0, 2, 1;
+L_0x5a6f3c1e4aa0 .part v0x5a6f3c1e3e90_0, 3, 1;
+L_0x5a6f3c1e4b40 .part v0x5a6f3c1e3e90_0, 2, 1;
+L_0x5a6f3c1e4d40 .part v0x5a6f3c1e3e90_0, 1, 1;
+L_0x5a6f3c1e4f30 .part v0x5a6f3c1e3e90_0, 0, 1;
+    .scope S_0x5a6f3c1cb720;
+T_0 ;
+    %vpi_call 2 11 "$dumpfile", "priority_4to2.vcd" {0 0 0};
+    %vpi_call 2 12 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x5a6f3c1cb720 {0 0 0};
+    %vpi_call 2 14 "$monitor", "time=%0t i=%b | y=%b valid=%b", $time, v0x5a6f3c1e3e90_0, v0x5a6f3c1e4020_0, v0x5a6f3c1e3f50_0 {0 0 0};
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0x5a6f3c1e3e90_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0x5a6f3c1e3e90_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v0x5a6f3c1e3e90_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 4, 0, 4;
+    %store/vec4 v0x5a6f3c1e3e90_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v0x5a6f3c1e3e90_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 5, 0, 4;
+    %store/vec4 v0x5a6f3c1e3e90_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v0x5a6f3c1e3e90_0, 0, 4;
+    %delay 10000, 0;
+    %pushi/vec4 7, 0, 4;
+    %store/vec4 v0x5a6f3c1e3e90_0, 0, 4;
+    %delay 10000, 0;
+    %vpi_call 2 24 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "priority_4to2_tb.v";
+    "priority_4to2.v";

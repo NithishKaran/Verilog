@@ -1,0 +1,86 @@
+$date
+	Fri Oct 23 07:44:45 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module encoder_8to3_tb $end
+$var wire 1 ! y2 $end
+$var wire 1 " y1 $end
+$var wire 1 # y0 $end
+$var reg 1 $ i0 $end
+$var reg 1 % i1 $end
+$var reg 1 & i2 $end
+$var reg 1 ' i3 $end
+$var reg 1 ( i4 $end
+$var reg 1 ) i5 $end
+$var reg 1 * i6 $end
+$var reg 1 + i7 $end
+$scope module uut $end
+$var wire 1 $ i0 $end
+$var wire 1 % i1 $end
+$var wire 1 & i2 $end
+$var wire 1 ' i3 $end
+$var wire 1 ( i4 $end
+$var wire 1 ) i5 $end
+$var wire 1 * i6 $end
+$var wire 1 + i7 $end
+$var wire 1 # y0 $end
+$var wire 1 " y1 $end
+$var wire 1 ! y2 $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+1$
+0#
+0"
+0!
+$end
+#10000
+1#
+1%
+0$
+#20000
+1"
+0#
+1&
+0%
+#30000
+1#
+1'
+0&
+#40000
+1!
+0#
+0"
+1(
+0'
+#50000
+1#
+1)
+0(
+#60000
+1"
+0#
+1*
+0)
+#70000
+1#
+1+
+0*
+#80000

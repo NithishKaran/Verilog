@@ -1,0 +1,89 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x635134031c30 .scope module, "mux_4to1_tb" "mux_4to1_tb" 2 3;
+ .timescale -9 -12;
+v0x63513405bcc0_0 .var "a", 0 0;
+v0x63513405bd80_0 .var "b", 0 0;
+v0x63513405be50_0 .var "c", 0 0;
+v0x63513405bf50_0 .var "d", 0 0;
+v0x63513405c020_0 .var "s0", 0 0;
+v0x63513405c0c0_0 .var "s1", 0 0;
+v0x63513405c190_0 .net "y", 0 0, L_0x63513405c910;  1 drivers
+S_0x635134045910 .scope module, "uut" "mux_4to1" 2 9, 3 1 0, S_0x635134031c30;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /INPUT 1 "d";
+    .port_info 4 /INPUT 1 "s1";
+    .port_info 5 /INPUT 1 "s0";
+    .port_info 6 /OUTPUT 1 "y";
+L_0x63513405c260 .functor NOT 1, v0x63513405c0c0_0, C4<0>, C4<0>, C4<0>;
+L_0x63513405c350 .functor NOT 1, v0x63513405c020_0, C4<0>, C4<0>, C4<0>;
+L_0x63513405c410 .functor AND 1, v0x63513405bcc0_0, L_0x63513405c260, L_0x63513405c350, C4<1>;
+L_0x63513405c5a0 .functor AND 1, v0x63513405bd80_0, L_0x63513405c260, v0x63513405c020_0, C4<1>;
+L_0x63513405c690 .functor AND 1, v0x63513405be50_0, v0x63513405c0c0_0, L_0x63513405c350, C4<1>;
+L_0x63513405c750 .functor AND 1, v0x63513405bf50_0, v0x63513405c0c0_0, v0x63513405c020_0, C4<1>;
+L_0x63513405c910 .functor OR 1, L_0x63513405c410, L_0x63513405c5a0, L_0x63513405c690, L_0x63513405c750;
+v0x635134046150_0 .net "a", 0 0, v0x63513405bcc0_0;  1 drivers
+v0x63513405b2b0_0 .net "b", 0 0, v0x63513405bd80_0;  1 drivers
+v0x63513405b370_0 .net "c", 0 0, v0x63513405be50_0;  1 drivers
+v0x63513405b410_0 .net "d", 0 0, v0x63513405bf50_0;  1 drivers
+v0x63513405b4d0_0 .net "ns0", 0 0, L_0x63513405c350;  1 drivers
+v0x63513405b5e0_0 .net "ns1", 0 0, L_0x63513405c260;  1 drivers
+v0x63513405b6a0_0 .net "s0", 0 0, v0x63513405c020_0;  1 drivers
+v0x63513405b760_0 .net "s1", 0 0, v0x63513405c0c0_0;  1 drivers
+v0x63513405b820_0 .net "x1", 0 0, L_0x63513405c410;  1 drivers
+v0x63513405b8e0_0 .net "x2", 0 0, L_0x63513405c5a0;  1 drivers
+v0x63513405b9a0_0 .net "x3", 0 0, L_0x63513405c690;  1 drivers
+v0x63513405ba60_0 .net "x4", 0 0, L_0x63513405c750;  1 drivers
+v0x63513405bb20_0 .net "y", 0 0, L_0x63513405c910;  alias, 1 drivers
+    .scope S_0x635134031c30;
+T_0 ;
+    %vpi_call 2 12 "$dumpfile", "mux_4to1.vcd" {0 0 0};
+    %vpi_call 2 13 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x635134031c30 {0 0 0};
+    %vpi_call 2 15 "$monitor", "Time=%0t | s1=%b s0=%b | a=%b b=%b c=%b d=%b | y=%b", $time, v0x63513405c0c0_0, v0x63513405c020_0, v0x63513405bcc0_0, v0x63513405bd80_0, v0x63513405be50_0, v0x63513405bf50_0, v0x63513405c190_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x63513405bcc0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x63513405bd80_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x63513405be50_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x63513405bf50_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x63513405c0c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x63513405c020_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x63513405c0c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x63513405c020_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x63513405c0c0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x63513405c020_0, 0, 1;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x63513405c0c0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x63513405c020_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 24 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "mux_4to1_tb.v";
+    "mux_4to1.v";
